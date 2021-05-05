@@ -83,6 +83,8 @@ Although KeeAgent is now ready to serve the keys, Git Bash needs to be told abou
 >$ ssh -T git@github.com  
 >Permission denied (publickey).
 
+ GIT_SSH must be entered as a system variable:
+
 Go back to KeePass, and click *Tools* > *Options...* and then click the *KeeAgent* tab. Choose to *Show a notification...*, and more importantly check the boxes in the *Cygwin/MSYS Integration* area.  Add a path such as *C:\Temp\cyglockfile* and *C:\Temp\syslockfile* or any arbitrary file name you want.  This will create socket files, which is a Unix concept - it allows applications to talk to each other through a file.  In this case, Git Bash will communicate with KeePass through one of these two socket files.
 
 ![keeagent7](assets/keepass-ssh-key-7.png)  
